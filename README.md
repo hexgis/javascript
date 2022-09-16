@@ -1,3 +1,131 @@
+# HEX Vue + Javascript Style Guide
+
+> **Note**: atualmente, este repositório está em fase de testes. Por isso, esteja ciente que, dada as especificades cada projeto, algumas inconsitências ou falsos alertas podem ocorrer.
+
+Este repositório tem o objetivo de guiar, esclarecer e documentar as convenções de estilo a serem seguidas pelos projetos da HEX que envolvam **Javascript** e **Vue.js**. Para isso, é aplicado o [**Airbnb Style Guide**](https://github.com/airbnb/javascript), o guia mais utilizado para Javascript, e o [**Vue Style Guide**](https://vuejs.org/style-guide/), com recomendações oficiais da própria desenvolvedora.
+
+Following these conventions will:
+- Improve readability;
+- Minimize common code smells;
+- Reduce errors and improve maintainability.
+
+### Material de Consulta
+
+[Anexado](#airbnb-javascript-style-guide-) a este repositório, é possível encontrar todas as regras e convenções que compõe o Airbnb Style Guide, de modo a fornecer um fácil acesso para consulta. Já o Vue Style Guide, devido a forma que foi publicado, só é possível consultá-lo direto no  [site](https://vuejs.org/style-guide/) da desenvolvedora.
+
+## FAQs
+
+### Why? Isn't code formatting up to personal preference?
+
+Consistent code formatting increases readability, and reduces the overhead of understanding each other's code. A coder should be able to pick up any arbitrary file, and understand it quickly. Ideally, our codebase should look as though it were written by a single coder. You are not coding for yourself; you are coding for HEX.
+
+### What about code with old formatting?
+
+There's no need to make a specific effort to re-format old code, **but** if you're modifying a file with outdated formatting, please update what you can while you're in there.
+
+### Como posso relatar um erro?
+
+Caso tenha encontrado algum erro, como falsos alertas do ESLint, inconsistências nas descrições, problemas de configuração do ambiente de desenvolvimento, instalação em um novo projeto ou qualquer outro problema relacionado com as regras e/ou com a documentação, favor relatar nas [issues](https://github.com/hexgis/javascript/issues).
+
+### Como posso contribuir?
+
+As contribuições, via [pull requests](https://github.com/hexgis/javascript/pulls), estão limitadas a:
+
+1. Soluções de [issues](https://github.com/hexgis/javascript/issues);
+2. Aperfeiçoamentos e correções de texto.
+
+Desse modo, **não serão admitidos sugestões de alterações às regras**. Por quê? Como bem explicado pela Standard, outro guia de estilo bem conhecido:
+
+> The whole point of a Style Guide is to save you time by avoiding
+[bikeshedding](https://docs.freebsd.org/en/books/faq/#bikeshed-painting) about code style. There are lots of debates online about tabs vs. spaces, etc. that will never be resolved. These debates just distract from getting stuff done. At the end of the day you have to 'just pick something', and that's the whole philosophy of a Style Guide -- its a bunch of sensible, but well justified and - preferably - widely used, 'just pick something' opinions. Hopefully, users see the value in that over defending their own opinions.
+>
+> Just use it and move on, there are actual real problems that you could spend your time solving! :P
+
+*Texto adaptado para melhor se adequar ao contexto explicitado. Para ler na íntegra, [aqui]( https://github.com/standard/standard#i-disagree-with-rule-x-can-you-change-it) está a fonte.*
+
+## Installation
+
+> **Note**: caso o projeto já tenha passado pelo processo de instalação, não é preciso realizar nenhuma das etapas abaixo, bastando apenas [configurar o editor](#editor-configuration).
+
+Para aplicar este guia em um novo projeto, é preciso:
+
+1. Instalar os pactoes necessários:
+    ```sh
+    npm install eslint eslint-config-airbnb-base eslint-plugin-import eslint-plugin-vue --save-dev
+    ```
+    1.1 **(Opcional)** Caso esteja utilizando [Nuxt.js](https://nuxtjs.org/pt/), recomenda-se instalar as convenções oficiais da desenvolvedora:
+      ```sh
+      npm install eslint-plugin-nuxt --save-dev
+      ```
+2. Adicionar os arquivos de configuração `.editorconfig` e `.eslintrc.js` na **raiz do projeto**;
+3. **(Opcional)** Se estiver utilizando [Docker](https://www.docker.com), devido os novos pacotes e arquivos de configuração adicionados, é preciso buildar novamente o container para aplicar as alterações:
+    ```sh
+    docker compose up --build <container>
+    ```
+
+## Editor Configuration
+
+To enable your editor/IDE to format your code automatically, you'll need to install the following extensions and configurations.
+
+> This will be different depending on the editor that you are using, so consult the documentation.
+
+### VSCode
+1. **Instalar a extensão [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)**
+
+    Ela será responsável por aplicar algumas das configurações de estilo diretamente no seu editor, através do arquivo `.editorconfig`, localizado na raiz do projeto.
+
+2. **Instalar a extensão [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur)**
+
+    Ela será responsável por tornar arquivos `.vue` reconhecíveis pelo VSCode (sintático e semântico) e disponibilizar atalhos de desenvolvimento (*snippet* and *emmet*).
+
+   2.1. Aplicar as seguintes **configurações**:
+
+    - Vetur > Validation > Template: `false`
+      ```JSON
+      "vetur.validation.template": false
+      ```
+    - Vetur > Format: `disable`
+      ```JSON
+      "vetur.format.enable": false
+      ```
+3. **Instalar a extensão [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)**
+
+    Ela será responsável por: 1) avaliar a conformidade do código com as regras estabelecidas pelos guias de estilo; 2) destacar os trechos não conformes e as suas respectivas regras quebradas, com referência; e 3) corrigir automaticamente os erros.
+
+   3.1. Aplicar as seguintes **configurações**:
+
+    - ESLint > Validate: `"javascript", "vue"`
+      ```JSON
+      "eslint.validate": [
+        "javascript",
+        "vue"
+      ]
+      ```
+    - ESLint > Format: `enable`
+      ```JSON
+      "eslint.format.enable": true
+      ```
+4. **Configurar o VSCode**
+
+    As seguintes configurações irão definir o **ESLint** como formatador padrão para arquivos Javascript e Vue, além formatá-los automaticamente ao salvar.
+    - Editor: Default Formatter
+      ```JSON
+      "[javascript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+      },
+      "[vue]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+      }
+      ```
+    - ESLint > Format On Save: `true`
+      ```JSON
+      "editor.formatOnSave": true
+      ```
+
+
+
+Ao final, é recomendado fechar e abrir o VS Code novamente, para ter certeza que todas as extensões estejam devidamente instaladas e configuradas.
+
 # Airbnb JavaScript Style Guide() {
 
 *A mostly reasonable approach to JavaScript*
