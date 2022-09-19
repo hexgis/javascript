@@ -1,6 +1,6 @@
 # HEX Vue + JavaScript Style Guide
 
-**Translations:** [PT-BR]()
+**Translations:** [PT-BR](https://github.com/hexgis/vue-javascript/blob/master/README-PT-BR.md)
 
 > **Note**: currently, this repository is in the testing phase. Therefore, be aware that, given the specifications of each project, some inconsistencies or false alerts may occur.
 
