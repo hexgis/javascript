@@ -1,86 +1,86 @@
 # HEX Vue + JavaScript Style Guide
 
-**Translations:** [PT-BR]()
+**Translations:** [ENG]()
 
-> **Note**: currently, this repository is in the testing phase. Therefore, be aware that, given the specifications of each project, some inconsistencies or false alerts may occur.
+> **Note**: atualmente, este repositório está em fase de testes. Por isso, esteja ciente que, dada as especificades cada projeto, algumas inconsitências ou falsos alertas podem ocorrer.
 
-This repository aims to guide, clarify and document all the style conventions to be followed by the HEX projects involving **JavaScript** and **Vue.js**. For this, [**Airbnb Style Guide**](https://github.com/airbnb/javascript), the most widely used JavaScript guide, and [**Vue Style Guide**](https://vuejs.org/style-guide/), with official recommendations, are applied.
+Este repositório tem o objetivo de guiar, esclarecer e documentar as convenções de estilo a serem seguidas pelos projetos da HEX que envolvam **Javascript** e **Vue.js**. Para isso, é aplicado o [**Airbnb Style Guide**](https://github.com/airbnb/javascript), o guia mais utilizado para Javascript, e o [**Vue Style Guide**](https://vuejs.org/style-guide/), com recomendações oficiais da própria desenvolvedora.
 
-Following these conventions will:
-- Improve readability;
-- Minimize common code smells;
-- Reduce errors and improve maintainability.
+Ao seguir essas convenções, será possível:
+- Melhorar a legibilidade;
+- Minimizar *code smells* comuns;
+- Reduzir erros e aperfeiçoar a manutenibilidade.
 
-### Reference Material
+### Material de Consulta
 
-[Attached](#airbnb-javascript-style-guide-) to this repository, you can find all the rules and conventions that compose the Airbnb Style Guide, providing easy access to consultation. On the other hand, due to the way that it was published, is only possible to consult the Vue Style Guide directly on the [developer's website](https://vuejs.org/style-guide/).
+[Anexado](#airbnb-javascript-style-guide-) a este repositório, é possível encontrar todas as regras e convenções que compõe o Airbnb Style Guide, de modo a fornecer um fácil acesso para consulta. Já o Vue Style Guide, devido a forma que foi publicado, só é possível consultá-lo direto no  [site do framework](https://vuejs.org/style-guide/).
 
-## FAQs
+## Perguntas Frequentes
 
-### Why? Isn't code formatting up to personal preference?
+### Por quê? Formatação de código não é uma preferência pessoal?
 
-Consistent code formatting increases readability, and reduces the overhead of understanding each other's code. A coder should be able to pick up any arbitrary file, and understand it quickly. Ideally, our codebase should look as though it were written by a single coder. You are not coding for yourself; you are coding for HEX.
+Uma formatação de código consistente aumenta a legibilidade e reduz a sobrecarga de entender o código de cada um. Um desenvolvedor deve ser capaz de pegar qualquer arquivo arbitrário e entendê-lo rapidamente. Idealmente, nossa base de código deve parecer que foi escrita por um único desenvolvedor. Você não está codificando para si mesmo; você está codificando para HEX.
 
-### What about code with old formatting?
+### E os código com formatação antiga?
 
-There's no need to make a specific effort to re-format old code, **but** if you're modifying a file with outdated formatting, please update what you can while you're in there.
+Não há necessidade de fazer um esforço específico para reformatar código antigo, **mas** se você já estiver modificando um arquivo com formatação desatualizada, por favor, atualize o que puder enquanto estiver lá.
 
-### How can I report an error?
+### Como posso relatar um erro?
 
-If you have found any errors, such as ESLint's false alerts, description inconsistencies, issues with installation or editor configuration, or any other rules-related and/or documentation problems, please report on the [issues page](https://github.com/hexgis/vue-javascript/issues).
+Caso tenha encontrado algum erro, como falsos alertas do ESLint, inconsistências nas descrições, dificuldades na instalação ou configuração do editor, ou qualquer outro problema relacionado com as regras e/ou com a documentação, favor relatar na [página issues](https://github.com/hexgis/javascript/issues).
 
-### How can I contribute?
+### Como posso contribuir?
 
-Contributions via [pull requests](https://github.com/hexgis/vue-javascript/pulls) are limited to:
+As contribuições, via [pull requests](https://github.com/hexgis/javascript/pulls), estão limitadas a:
 
-1. [Issues](https://github.com/hexgis/javascript/issues) solving;
-2. Text improvements and corrections.
+1. Soluções de [issues](https://github.com/hexgis/javascript/issues);
+2. Aperfeiçoamentos e correções de texto.
 
-Therefore, **suggestions for changes to the rules will not be accepted**. Why? As well explained by Standard, another well-known style guide:
+Desse modo, **não serão admitidos sugestões de alterações às regras**. Por quê? Como bem explicado pela Standard, outro guia de estilo bem conhecido:
 
 > The whole point of a Style Guide is to save you time by avoiding
 [bikeshedding](https://docs.freebsd.org/en/books/faq/#bikeshed-painting) about code style. There are lots of debates online about tabs vs. spaces, etc. that will never be resolved. These debates just distract from getting stuff done. At the end of the day you have to 'just pick something', and that's the whole philosophy of a Style Guide -- its a bunch of sensible, but well justified and - preferably - widely used, 'just pick something' opinions. Hopefully, users see the value in that over defending their own opinions.
 >
 > Just use it and move on, there are actual real problems that you could spend your time solving! :stuck_out_tongue_winking_eye:
 
-*Text adapted to better suit the context explained. To read it in full, [here](https://github.com/standard/standard#i-disagree-with-rule-x-can-you-change-it) is the source.*
+*Texto adaptado para melhor se adequar ao contexto explicitado. Para ler na íntegra, [aqui]( https://github.com/standard/standard#i-disagree-with-rule-x-can-you-change-it) está a fonte.*
 
-## Installation
+## Instalação
 
-> **Note**: if the project has already gone through the installation process, it is **not necessary** to perform any of the steps below, just [configure your editor/IDE]((#editor-configuration)).
+> **Note**: caso o projeto já tenha passado pelo processo de instalação, não é preciso realizar nenhuma das etapas abaixo, bastando apenas [configurar o editor](#editor-configuration).
 
-To apply this guide to a new project, you need:
+Para aplicar este guia em um novo projeto, é preciso:
 
-1. Install the necessary packages:
+1. Instalar os pactoes necessários:
     ```sh
     npm install eslint eslint-config-airbnb-base eslint-plugin-import eslint-plugin-vue --save-dev
     ```
-    1.1 **(Optional)** If you are using [Nuxt.js](https://nuxtjs.org/pt/), it's recommended to install the official rules set:
+    1.1 **(Opcional)** Caso esteja utilizando [Nuxt.js](https://nuxtjs.org/pt/), recomenda-se instalar as convenções oficiais da desenvolvedora:
       ```sh
       npm install eslint-plugin-nuxt --save-dev
       ```
-2. Add the `.editorconfig` and `.eslintrc.js` configuration files to the  **project root**;
-3. **(Optional)** If you are using [Docker](https://www.docker.com), due to the new packages and configuration files added, you need to re-build the container to apply the changes:
+2. Adicionar os arquivos de configuração `.editorconfig` e `.eslintrc.js` na **raiz do projeto**;
+3. **(Opcional)** Se estiver utilizando [Docker](https://www.docker.com), devido os novos pacotes e arquivos de configuração adicionados, é preciso buildar novamente o container para aplicar as alterações:
     ```sh
     docker compose up --build <container>
     ```
 
-## Editor Configuration
+## Configuração do Editor/IDE
 
-To enable your editor/IDE to format your code automatically, you'll need to install the following extensions and configurations.
+Para permitir que seu editor/IDE formate seu código automaticamente, você precisará instalar as seguintes extensões e configurações.
 
-> This will be different depending on the editor that you are using, so consult the documentation.
+> Isso será diferente dependendo do editor que você estiver utilizando, portanto consulte a sua documentação.
 
 ### VSCode
-1. **Install the [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig) extension**
+1. **Instalar a extensão [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)**
 
-    It will be responsible for applying some of the guide style settings directly into your editor, through the `.editorconfig` file, located in the project root.
+    Ela será responsável por aplicar algumas das configurações de estilo diretamente no seu editor, através do arquivo `.editorconfig`, localizado na raiz do projeto.
 
-2. **Install the [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) extension**
+2. **Instalar a extensão [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur)**
 
-    It will be responsible for making `.vue` files recognizable by VSCode (syntactic and semantic highlighting) and providing development shortcuts (snippet and emmet).
+    Ela será responsável por tornar arquivos `.vue` reconhecíveis pelo VSCode (sintático e semântico) e disponibilizar atalhos de desenvolvimento (*snippet* and *emmet*).
 
-   2.1. Apply the following **settings**:
+   2.1. Aplicar as seguintes **configurações**:
 
     - Vetur > Validation > Template: `false`
       ```JSON
@@ -90,11 +90,11 @@ To enable your editor/IDE to format your code automatically, you'll need to inst
       ```JSON
       "vetur.format.enable": false
       ```
-3. **Install the [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) extension**
+3. **Instalar a extensão [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)**
 
-    It will be responsible for 1) evaluating the code compliance with the rules established by the style guides; 2) highlighting the non-compliant code excerpts and their respective broken rules, with reference; and 3) correcting errors automatically.
+    Ela será responsável por: 1) avaliar a conformidade do código com as regras estabelecidas pelos guias de estilo; 2) destacar os trechos não conformes e as suas respectivas regras quebradas, com referência; e 3) corrigir automaticamente os erros.
 
-   3.1. Apply the following **settings**:
+   3.1. Aplicar as seguintes **configurações**:
 
     - ESLint > Validate: `"javascript", "vue"`
       ```JSON
@@ -107,10 +107,9 @@ To enable your editor/IDE to format your code automatically, you'll need to inst
       ```JSON
       "eslint.format.enable": true
       ```
-4. **Configure VSCode**
+4. **Configurar o VSCode**
 
-    The following settings will set **ESLint** as the default formatter for Javascript and Vue files, and automatically format them on save.
-
+    As seguintes configurações irão definir o **ESLint** como formatador padrão para arquivos Javascript e Vue, além formatá-los automaticamente ao salvar.
     - Editor: Default Formatter
       ```JSON
       "[javascript]": {
@@ -125,7 +124,9 @@ To enable your editor/IDE to format your code automatically, you'll need to inst
       "editor.formatOnSave": true
       ```
 
-In the end, to make sure all extensions are properly installed and configured, it's recommended to close and open the VS Code again.
+
+
+Ao final, é recomendado fechar e abrir o VS Code novamente, para ter certeza que todas as extensões estejam devidamente instaladas e configuradas.
 
 # Airbnb JavaScript Style Guide() {
 
