@@ -1,4 +1,4 @@
-# HEX Vue + Javascript Style Guide
+# HEX Vue + JavaScript Style Guide
 
 > **Note**: atualmente, este repositório está em fase de testes. Por isso, esteja ciente que, dada as especificades cada projeto, algumas inconsitências ou falsos alertas podem ocorrer.
 
@@ -11,7 +11,7 @@ Following these conventions will:
 
 ### Material de Consulta
 
-[Anexado](#airbnb-javascript-style-guide-) a este repositório, é possível encontrar todas as regras e convenções que compõe o Airbnb Style Guide, de modo a fornecer um fácil acesso para consulta. Já o Vue Style Guide, devido a forma que foi publicado, só é possível consultá-lo direto no  [site](https://vuejs.org/style-guide/) da desenvolvedora.
+[Anexado](#airbnb-javascript-style-guide-) a este repositório, é possível encontrar todas as regras e convenções que compõe o Airbnb Style Guide, de modo a fornecer um fácil acesso para consulta. Já o Vue Style Guide, devido a forma que foi publicado, só é possível consultá-lo direto no  [site do framework](https://vuejs.org/style-guide/).
 
 ## FAQs
 
