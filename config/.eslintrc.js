@@ -21,6 +21,11 @@ module.exports = {
       */
     'import/core-modules': ['vue', 'vuex'],
   },
+  /**
+   * Directories and files to be ignored by ESLint:
+   * - /plugins: Nuxt.js third-party plugins
+   */
+  ignorePatterns: ['/plugins'],
   // Configurations (set of rules)
   extends: [
     /**
