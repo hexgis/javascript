@@ -9,6 +9,18 @@ module.exports = {
     browser: true,
     node: true,
   },
+  settings: {
+    /**
+     * An array of additional modules to consider as "core" modules
+     * @see https://github.com/import-js/eslint-plugin-import/blob/main/README.md#importcore-modules
+     */
+    /**
+      * Modules already included in Nuxt.js
+      * BUGFIX: without this setting, rule import/no-extraneous-dependencies is violated.
+      * @see https://stackoverflow.com/a/55174675
+      */
+    'import/core-modules': ['vue', 'vuex'],
+  },
   // Configurations (set of rules)
   extends: [
     /**
