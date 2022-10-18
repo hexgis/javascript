@@ -59,7 +59,7 @@ To apply this guide to a new project, you need:
       ```sh
       npm install eslint-plugin-nuxt --save-dev
       ```
-2. Add the `.editorconfig` and `.eslintrc.js` configuration files to the  **project root**;
+2. Add the [`.editorconfig`](https://github.com/hexgis/vue-javascript/blob/master/config/.editorconfig) and [`.eslintrc.js`](https://github.com/hexgis/vue-javascript/blob/master/config/.eslintrc.js) configuration files to the  **project root**;
 3. **(Optional)** If you are using [Docker](https://www.docker.com), due to the new packages and configuration files added, you need to re-build the container to apply the changes:
     ```sh
     docker compose up --build <container>
