@@ -47,7 +47,7 @@ Desse modo, **não serão admitidos sugestões de alterações às regras**. Por
 
 ## Instalação
 
-> **Note**: caso o projeto já tenha passado pelo processo de instalação, não é preciso realizar nenhuma das etapas abaixo, bastando apenas [configurar o editor](#editor-configuration).
+> **Note**: caso o projeto já tenha passado pelo processo de instalação, não é preciso realizar nenhuma das etapas abaixo, bastando apenas [configurar o editor](#configuração-do-editoride).
 
 Para aplicar este guia em um novo projeto, é preciso:
 

@@ -47,7 +47,7 @@ Therefore, **suggestions for changes to the rules will not be accepted**. Why? A
 
 ## Installation
 
-> **Note**: if the project has already gone through the installation process, it is **not necessary** to perform any of the steps below, just [configure your editor/IDE]((#editor-configuration)).
+> **Note**: if the project has already gone through the installation process, it is **not necessary** to perform any of the steps below, just [configure your editor/IDE](#editor-configuration).
 
 To apply this guide to a new project, you need:
 
